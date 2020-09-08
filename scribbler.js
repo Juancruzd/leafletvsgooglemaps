@@ -8,31 +8,43 @@ var getAll = function (selector, scope) {
   scope = scope ? scope : document;
   return scope.querySelectorAll(selector);
 };
+ 
 
-// setup typewriter effect in the terminal demo
-if (document.getElementsByClassName('demo').length > 0) {
+if (document.getElementsByClassName('leafletinst').length > 0) {
   var i = 0;
-  var txt = `scribbler
-            [Entry mode; press Ctrl+D to save and quit; press Ctrl+C to quit without saving]
+  var txt = ` <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+              <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+              `;
+  var speed1 = 60;
 
-            ###todo for new year dinner party
-
-            - milk
-            - butter
-            - green onion
-            - lots and lots of kiwis 🥝`;
-  var speed = 60;
-
-  function typeItOut () {
+  function typeItOut1 () {
     if (i < txt.length) {
-      document.getElementsByClassName('demo')[0].innerHTML += txt.charAt(i);
+      document.getElementsByClassName('leafletinst')[0].innerHTML += txt.charAt(i);
       i++;
-      setTimeout(typeItOut, speed);
+      setTimeout(typeItOut1, speed1);
     }
   }
 
-  setTimeout(typeItOut, 1800);
+  setTimeout(typeItOut1, 1800);
 }
+if (document.getElementsByClassName('googlemapsinst').length > 0) {
+  var j = 0;
+  
+  var txt1 = `<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=iniciaMapa">
+  </script>`;
+  var speed2 = 60;
+
+  function typeItOut2 () {
+    if (j < txt1.length) {
+      document.getElementsByClassName('googlemapsinst')[0].innerHTML += txt1.charAt(j);
+      j++;
+      setTimeout(typeItOut2, speed2);
+    }
+  }
+
+  setTimeout(typeItOut2, 1800);
+}  
 
 // toggle tabs on codeblock
 window.addEventListener("load", function() {
