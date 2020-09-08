@@ -164,8 +164,7 @@
         zoomOffset: -1
       }).addTo(mymap);
     
-      L.marker([51.5, -0.09]).addTo(mymap)
-        .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+      L.marker([51.5, -0.09]).addTo(mymap).bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
     
       L.circle([51.508, -0.11], 500, {
         color: 'red',
@@ -194,29 +193,22 @@
     </script>
     <script> 
       var map;
-
       var coordenadas = {
           lat: 0,
           lng: 0
       }
-
       var propiedades = {
           center: coordenadas,
           zoom: 12
       }
-
       function iniciaMapa() {
-
-          map = new google.maps.Map(document.getElementById('map'), propiedades);
-
+          map = new google.maps.Map(document.getElementById('map'), propiedades); 
           ///ICONOS
           var icono1 = {
-              url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Map_pin_icon.svg/1200px-Map_pin_icon.svg.png", // url
               scaledSize: new google.maps.Size(50, 50), // scaled size
               origin: new google.maps.Point(0, 0), // origin
               anchor: new google.maps.Point(0, 0) // anchor
           }; 
-
           ///COORDENADAS
           var coordenadas1 = {
               lat: 21.152474,
@@ -237,10 +229,7 @@
           }); 
           map.setCenter(coordenadas1);
       }
-
     </script> 
-  <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsMYDTaWc3Sr5_WUw2dNySgVHOd1l-PxI&callback=iniciaMapa">
-        </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsMYDTaWc3Sr5_WUw2dNySgVHOd1l-PxI&callback=iniciaMapa"></script>
   </body>
 </html>
