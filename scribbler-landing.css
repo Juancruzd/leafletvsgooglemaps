@@ -1,7 +1,7 @@
 /* nav specialized to landing page */
 .logo {
   background: url('logo.svg') no-repeat;
-  background-size: contain; 
+  background-size: contain;
 }
 
 nav {
